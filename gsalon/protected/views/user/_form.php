@@ -37,7 +37,7 @@
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '创建' : '保存'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
