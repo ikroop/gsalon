@@ -7,7 +7,7 @@ $this->pageTitle=Yii::app()->name.' - 添加用户到客户';
 $this->menu=array(array('label'=>'回到项目','url'=>array('view','id'=>$model->project->id)),);
 ?>
 
-<h1>Add User To<?php echo $model->project->name;?></h1>
+<h1>添加用户到<?php echo $model->project->name;?></h1>
 <?php if(Yii::app()->user->hasFlash('success')):?>
 
 <div class="successMessage">
@@ -19,7 +19,7 @@ $this->menu=array(array('label'=>'回到项目','url'=>array('view','id'=>$model
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm')?>
 
-<p class="note">Fields with<span class="required">*</span> are required.</p>
+<p class="note"><span class="required">*</span> 为必填项</p>
 <div class="row">
 <?php $this->widget('CAutoComplete',array(
 		'model'=>$model,
@@ -29,12 +29,12 @@ $this->menu=array(array('label'=>'回到项目','url'=>array('view','id'=>$model
 		'htmlOptions'=>array('size'=>25),
 		
 ));?>
-
+&nbsp; <class="note"><span class="required">*</span>
 <?php echo $form->error($model,'username'); ?>
 </div>
 
 <div class="row">
-<?php echo $form->labelEx($model,'role');?>
+<?php echo $form->labelEx($model,'角色');?>
 <?php echo $form->dropDownList($model,'role',Project::getUserRoleOptions());?>
 <?php echo $form->error($model,'role');?>
 </div>
