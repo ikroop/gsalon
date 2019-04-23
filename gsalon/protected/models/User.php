@@ -84,14 +84,14 @@ array('id, email, username, password, last_login_time,create_time, create_user_i
 	{
 		return array(
 			'id' => 'ID',
-			'email' => 'Email',
-			'username' => 'Username',
-			'password' => 'Password',
-			'last_login_time' => 'Last Login Time',
-			'create_time' => 'Create Time',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'email' => '电话号码',
+			'username' => '用户名',
+			'password' => '密码',
+			'last_login_time' => '最后登入时间',
+			'create_time' => '创建时间',
+			'create_user_id' => '创建用户',
+			'update_time' => '更新时间',
+			'update_user_id' => '更新用户',
 		);
 	}
 

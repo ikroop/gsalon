@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'用户'=>array('index'),
 	$model->id,
 );
 
@@ -38,7 +38,7 @@ if(Yii::app()->user->checkAccess('admin'))
 
 
 
-<h1>View User #<?php echo $model->id; ?></h1>
+<h1>显示用户 #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -51,6 +51,6 @@ if(Yii::app()->user->checkAccess('admin'))
 		'create_time',
 		'create_user_id',
 		'update_time',
-		'update_user_id',
+		/* 'update_user_id', */
 	),
 )); ?>
