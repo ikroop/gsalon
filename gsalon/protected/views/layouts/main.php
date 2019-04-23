@@ -30,19 +30,19 @@
 	
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')), 
+				array('label'=>'首页', 'url'=>array('/site/index')),
+				/* array('label'=>'关于我们', 'url'=>array('/site/page', 'view'=>'about')), */ 
 					
-				array('label'=>'Projects', 'url'=>array('project/index')),
+				array('label'=>'客户', 'url'=>array('project/index')),
 				
 			    
-				array('label'=>'System Message', 'url'=>array('admin/sysMessage/index')),
+				
 					/* array('label'=>'Users', 'url'=>array('user/index')), */
-					array('label'=>'Upload', 'url'=>array('/upload/index')),
-				array('label'=>'Users', 'url'=>array('user/index'),'visible'=>Yii::app()->user->checkAccess("admin")),
-					
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					/* array('label'=>'Upload', 'url'=>array('/upload/index')), */
+				array('label'=>'用户', 'url'=>array('user/index'),'visible'=>Yii::app()->user->checkAccess("admin")),
+			    /* array('label'=>'系统消息', 'url'=>array('admin/sysMessage/index')),  */
+				array('label'=>'登入', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'登出 ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 		
@@ -56,9 +56,8 @@
 	<?php echo $content; ?>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by qiang.lv@Xuzhousoft.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+		版权所有 &copy; <?php echo date('Y'); ?> 耿艺瑄<br/>
+		
 	</div><!-- footer -->
 
 </div><!-- page -->

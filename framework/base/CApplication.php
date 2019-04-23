@@ -62,9 +62,9 @@ abstract class CApplication extends CModule
 	public $charset='UTF-8';
 	/**
 	 * @var string the language that the application is written in. This mainly refers to
-	 * the language that the messages and view files are in. Defaults to 'en_us' (US English).
+	 * the language that the messages and view files are in. Defaults to 'zh-CN' (US English).
 	 */
-	public $sourceLanguage='en_us';
+	public $sourceLanguage='zh-CN';
 
 	private $_id;
 	private $_basePath;
@@ -285,7 +285,7 @@ abstract class CApplication extends CModule
 	 *
 	 * Unless your application needs to support multiple languages, you should always
 	 * set this language to null to maximize the application's performance.
-	 * @param string $language the user language (e.g. 'en_US', 'zh_CN').
+	 * @param string $language the user language (e.g. 'zh-CN', 'zh_CN').
 	 * If it is null, the {@link sourceLanguage} will be used.
 	 */
 	public function setLanguage($language)
@@ -328,7 +328,7 @@ abstract class CApplication extends CModule
 	 * will be returned.
 	 *
 	 * For consistency, it is recommended that the locale ID is given
-	 * in lower case and in the format of LanguageID_RegionID (e.g. "en_us").
+	 * in lower case and in the format of LanguageID_RegionID (e.g. "zh-CN").
 	 *
 	 * @param string $srcFile the original file
 	 * @param string $srcLanguage the language that the original file is in. If null, the application {@link sourceLanguage source language} is used.
@@ -350,7 +350,7 @@ abstract class CApplication extends CModule
 
 	/**
 	 * Returns the locale instance.
-	 * @param string $localeID the locale ID (e.g. en_US). If null, the {@link getLanguage application language ID} will be used.
+	 * @param string $localeID the locale ID (e.g. zh-CN). If null, the {@link getLanguage application language ID} will be used.
 	 * @return CLocale the locale instance
 	 */
 	public function getLocale($localeID=null)
@@ -817,7 +817,7 @@ abstract class CApplication extends CModule
 		$components=array(
 			'coreMessages'=>array(
 				'class'=>'CPhpMessageSource',
-				'language'=>'en_us',
+				'language'=>'zh-CN',
 				'basePath'=>YII_PATH.DIRECTORY_SEPARATOR.'messages',
 			),
 			'db'=>array(

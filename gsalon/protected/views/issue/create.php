@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Issues'=>array('index'),
-	'Create',
+	'创建',
 );
 
 $this->menu=array(
-	array('label'=>'List Issue', 'url'=>array('index')),
+	array('label'=>'交易列表', 'url'=>array('index')),
 	/* array('label'=>'Manage Issue', 'url'=>array('admin')), */
 );
 ?>
 
-<h1>Create Issue</h1>
+<h1>创建交易</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

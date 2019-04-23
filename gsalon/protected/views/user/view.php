@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	 array('label'=>'List User', 'url'=>array('index')),
+	 array('label'=>'用户列表', 'url'=>array('index')),
 /* 	array('label'=>'Create User', 'url'=>array('create')), 
 	array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
@@ -14,22 +14,22 @@ $this->menu=array(
 
 if(Yii::app()->user->checkAccess('admin'))
 {
-	$this->menu[] = array('label'=>'Create User',
+	$this->menu[] = array('label'=>'创建用户',
 			'url'=>array('create'));
 }
 if(Yii::app()->user->checkAccess('admin'))
 {
-	$this->menu[] = array('label'=>'Update User',
+	$this->menu[] = array('label'=>'更新用户',
 			'url'=>array('update', 'id'=>$model->id));
 }
 if(Yii::app()->user->checkAccess('admin'))
 {
-	$this->menu[] = array('label'=>'Delete User',
+	$this->menu[] = array('label'=>'删除用户',
 			'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?'));
 }
 if(Yii::app()->user->checkAccess('admin'))
 {
-	$this->menu[] = array('label'=>'Manage User',
+	$this->menu[] = array('label'=>'管理用户',
 			'url'=>array('admin'));
 }
 

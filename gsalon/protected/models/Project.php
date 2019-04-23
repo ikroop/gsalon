@@ -70,12 +70,12 @@ class Project extends TrackStarActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'create_time' => 'Create Time',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'name' => '名字',
+			'description' => '描述',
+			'create_time' => '创建时间',
+			'create_user_id' => '创建用户',
+			'update_time' => '更新时间',
+			'update_user_id' => '更新用户',
 		);
 	}
 

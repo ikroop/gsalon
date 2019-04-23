@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Users'=>array('index'),
-	'Create',
+	'创建',
 );
 
 $this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
+	array('label'=>'用户列表', 'url'=>array('index')),
+	array('label'=>'管理用户', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create User</h1>
+<h1>创建用户</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -5,29 +5,29 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"> <span class="required">*</span> 为必填项</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->labelEx($model,'电话号码'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->labelEx($model,'用户名'); ?>
 		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->labelEx($model,'密码'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 	<div class="row">
-	<?php echo $form->label($model,'password_repeat');?>
+	<?php echo $form->label($model,'重复密码');?>
 	<?php echo $form->passwordField($model,'password_repeat',array('size'=>60,'maxlength'=>256));?>
 	<?php echo $form->error($model,'password_repeat');?>
 	</div>

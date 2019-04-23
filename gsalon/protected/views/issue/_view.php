@@ -1,12 +1,12 @@
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('名字')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->name), array('issue/view', 'id'=>$data->id)); ?>
 	<br />
 
 	
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('description')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('描述')); ?>:</b>
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 

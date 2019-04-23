@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Issue', 'url'=>array('index','pid'=>$model->project->id)),
+	array('label'=>'交易列表', 'url'=>array('index','pid'=>$model->project->id)),
     /* array('label'=>'Create Issue', 'url'=>array('create','pid'=>$model->project->id)), */
 	/* array('label'=>'Create Issue', 'url'=>array('create')), */
     
@@ -29,13 +29,13 @@ $params=array('project'=>$project);
 if(Yii::app()->user->checkAccess('createIssue',$params))
 
 {
-	$this->menu[] = array('label'=>'Create Issue',
+	$this->menu[] = array('label'=>'创建交易',
 			'url'=>array('create', 'pid'=>$model->project->id));
 }
 
 if(Yii::app()->user->checkAccess('updateIssue',$params))
 {
-	$this->menu[] = array('label'=>'Update Issue',
+	$this->menu[] = array('label'=>'更新交易',
 			'url'=>array('update', 'id'=>$model->id));
 }
 /* var_dump(Yii::app()->user->checkAccess('deleteIssue',$params));exit; */
@@ -48,13 +48,13 @@ if(Yii::app()->user->checkAccess('updateIssue',$params))
 
 if(Yii::app()->user->checkAccess('admin'))
 {
-	$this->menu[] = array('label'=>'Manage Issue',
+	$this->menu[] = array('label'=>'管理交易',
 			'url'=>array('admin', 'pid'=>$model->project->id));
 } 
 				
 ?>
 
-<h1>View Issue #<?php echo $model->id; ?></h1>
+<h1>交易信息 #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -79,11 +79,11 @@ if(Yii::app()->user->checkAccess('admin'))
 	      'name'=>'owner_id',
 	        'value'=>CHtml::encode($model->owner->username)
 	    ), 
-	   array(
+	 /*   array(
 	        'name'=>'requester_id',
 	        'value'=>CHtml::encode($model->requester->username)
 	    ), 
-	
+	 */
 	/* 	'owner_id', 
 	   'requester_id',  */
 		

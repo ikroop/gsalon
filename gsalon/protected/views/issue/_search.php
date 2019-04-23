@@ -11,12 +11,12 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
+		<?php echo $form->label($model,'名字'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'description'); ?>
+		<?php echo $form->label($model,'描述'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
 	</div>
 
@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'create_time'); ?>
+		<?php echo $form->label($model,'创建时间'); ?>
 		<?php echo $form->textField($model,'create_time'); ?>
 	</div>
 
@@ -56,7 +56,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'update_time'); ?>
+		<?php echo $form->label($model,'更新时间'); ?>
 		<?php echo $form->textField($model,'update_time'); ?>
 	</div>
 
@@ -66,7 +66,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('搜索'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

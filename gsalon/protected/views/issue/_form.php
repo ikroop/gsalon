@@ -5,18 +5,18 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"> <span class="required">*</span> 的是必填项</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->labelEx($model,'名字'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
+		<?php echo $form->labelEx($model,'描述'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
@@ -53,19 +53,19 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'requester_id'); ?>
+		<?php /* echo $form->labelEx($model,'requester_id'); */ ?>
 		
-		<?php echo $form->dropDownList($model,'requester_id', $this->getProject()->getUserOptions());  ?>
-		<?php if (!$this->getProject()->getUserOptions()):?>
-	<?php echo 'You must add some users to this project frist.';?>
-	<?php endif ?>
-		<?php echo $form->error($model,'requester_id'); ?>
+		<?php /* echo $form->dropDownList($model,'requester_id', $this->getProject()->getUserOptions()); */  ?>
+		<?php /* if (!$this->getProject()->getUserOptions()): */?>
+	<?php /* echo 'You must add some users to this project frist.'; */?>
+	<?php /* endif */ ?>
+		<?php /* echo $form->error($model,'requester_id'); */ ?>
 	</div>
 
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '添加' : '保存'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -40,9 +40,9 @@ class Issue extends TrackStarActiveRecord
     	
     	
         return array(
-            self::TYPE_BUG=>'Bug',
-            self::TYPE_FEATURE=>'Feature',
-            self::TYPE_TASK=>'Task',
+            self::TYPE_BUG=>'男性',
+            self::TYPE_FEATURE=>'女性',
+           
           
         );
         
@@ -51,9 +51,9 @@ class Issue extends TrackStarActiveRecord
      public function getStatusOptions()
     {
         return array(
-            self::TYPE_NOT_YET_STARTED=>'Not yet started',
-            self::TYPE_STARTED=>'Started',
-            self::TYPE_FINISHED=>'Finished',
+            self::TYPE_NOT_YET_STARTED=>'白金',
+            self::TYPE_STARTED=>'白银',
+            self::TYPE_FINISHED=>'一般',
             
         );
         
@@ -118,17 +118,17 @@ class Issue extends TrackStarActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'project_id' => 'Project',
-			'type_id' => 'Type',
-			'status_id' => 'Status',
-			'owner_id' => 'Owner',
-			'requester_id' => 'Requester',
-			'create_time' => 'Create Time',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'name' => '名字',
+			'description' => '描述',
+			'project_id' => '客户',
+			'type_id' => '类型',
+			'status_id' => '状态',
+			'owner_id' => '负责人',
+			/* 'requester_id' => 'Requester', */
+			'create_time' => '创建时间',
+			'create_user_id' => '创建用户',
+			'update_time' => '更新时间',
+			'update_user_id' => '更新用户',
 		);
 	}
 

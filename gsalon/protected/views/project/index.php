@@ -1,20 +1,20 @@
 <?php
 $this->breadcrumbs=array(
-	'Projects',
+	'客户',
 );
 
 $this->menu=array(
-	array('label'=>'List Project', 'url'=>array('index')),
-	array('label'=>'Manage Project', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
+	array('label'=>'客户列表', 'url'=>array('index')),
+	array('label'=>'管理客户', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
 );
 ?>
 
-<?php if($sysMessage != null):?>
+<?/* php if($sysMessage != null): */?>
 <div class="sys-message">
-<?php echo 'Recent message:'."&nbsp$sysMessage" ;?>
+<?/* php echo '最新消息:'."&nbsp$sysMessage" ; */?>
 </div>
-<?php Yii::app()->clientScript->registerScript('fadeAndHideEffect','$(".sys-message").animate({opacity: 1.0}, 10000).fadeOut("slow");'
-); endif; ?>
+<?/* php Yii::app()->clientScript->registerScript('fadeAndHideEffect','$(".sys-message").animate({opacity: 1.0}, 10000).fadeOut("slow");'
+); */ /* endif; */ ?>
 
 
 
@@ -22,7 +22,7 @@ $this->menu=array(
 <br/>
 
 
-<h1>Projects</h1>
+<h1>客户</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

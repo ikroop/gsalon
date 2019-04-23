@@ -1,10 +1,10 @@
 <?php
-$this->pageTitle=Yii::app()->name.' - Add User To Project';
- $this->breadcrumbs=array($model->project->name=>array('view','id'=>$model->project->id),'Add User'); 
+$this->pageTitle=Yii::app()->name.' - 添加用户到客户';
+ $this->breadcrumbs=array($model->project->name=>array('view','id'=>$model->project->id),'添加用户'); 
  
 /*  var_dump($model); */
 
-$this->menu=array(array('label'=>'Back To Project','url'=>array('view','id'=>$model->project->id)),);
+$this->menu=array(array('label'=>'回到项目','url'=>array('view','id'=>$model->project->id)),);
 ?>
 
 <h1>Add User To<?php echo $model->project->name;?></h1>
@@ -40,7 +40,7 @@ $this->menu=array(array('label'=>'Back To Project','url'=>array('view','id'=>$mo
 </div>
 
 <div class="row buttons">
-<?php echo CHtml::submitButton('Add User');?>
+<?php echo CHtml::submitButton('添加用户');?>
 </div>
 
 <?php $this->endWidget();?>

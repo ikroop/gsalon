@@ -192,6 +192,13 @@ exist.');
 	 */
 	public function actionIndex()
 	{
+	    $model=new Issue;
+	    
+	    $model->project_id = $this->_project->id;
+	    
+	    $project=$this->loadProject($model->project_id);
+	    $params=array('project'=>$project);
+	    
 		$dataProvider=new CActiveDataProvider('Issue',array(
 		    'criteria'=>array(
 		        'condition'=>'project_id=:projectId',
@@ -199,7 +206,8 @@ exist.');
 		    ),
 		));
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		    'model'=>$model,
+			'dataProvider'=>$dataProvider, 
 		));
 	}
 

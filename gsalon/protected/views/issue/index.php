@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Issues',
+	'交易',
 );
 
 
 $this->menu=array(
 		
-		array('label'=>'Create Issue', 'url'=>array('create'),'visible'=>Yii::app()->user->checkAccess("admin")),
-    array('label'=>'Manage Issue', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
+		array('label'=>'创建交易', 'url'=>array('create'),'visible'=>Yii::app()->user->checkAccess("admin")),
+    array('label'=>'管理交易', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
     
 );
 
 ?>
 
-<h1>Issues</h1>
+<h1>交易</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

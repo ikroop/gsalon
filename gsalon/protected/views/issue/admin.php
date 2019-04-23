@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
 	'Issues'=>array('index'),
-	'Manage',
+	'管理',
 );
 
 $this->menu=array(
-	array('label'=>'List Issue', 'url'=>array('index')),
-	array('label'=>'Create Issue', 'url'=>array('create')),
+	array('label'=>'交易列表', 'url'=>array('index')),
+	array('label'=>'创建交易', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,12 +23,12 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Issues</h1>
+<h1>管理交易</h1>
 
-<p>
+<!-- <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+</p> -->
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
