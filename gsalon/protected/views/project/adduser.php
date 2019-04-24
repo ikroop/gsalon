@@ -35,7 +35,8 @@ $this->menu=array(array('label'=>'回到项目','url'=>array('view','id'=>$model
 
 <div class="row">
 <?php echo $form->labelEx($model,'角色');?>
-<?php echo $form->dropDownList($model,'role',Project::getUserRoleOptions());?>
+<?php var_dump(Project::getUserRoleOptions());?>
+<?/* php echo $form->dropDownList($model,'role',Project::getUserRoleOptions()); */?>
 <?php echo $form->error($model,'role');?>
 </div>
 

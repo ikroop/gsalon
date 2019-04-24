@@ -85,7 +85,7 @@ class Issue extends TrackStarActiveRecord
 		return array(
 			array('name', 'required'),
 				array('owner_id', 'required'),
-				array('requester_id', 'required'),
+				/* array('requester_id', 'required'), */
 			/* array('project_id, type_id, status_id, owner_id, requester_id, create_user_id, update_user_id', 'numerical', 'integerOnly'=>true), */
 				array('project_id, type_id, status_id, owner_id, requester_id, create_user_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>256),
