@@ -255,4 +255,5 @@ class ProjectController extends Controller
 		$this->render('adduser',array('model'=>$form,
 				'usernames'=>$usernames));
 	}
+	
 }

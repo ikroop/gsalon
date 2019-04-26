@@ -21,23 +21,19 @@ $this->menu=array(array('label'=>'回到项目','url'=>array('view','id'=>$model
 
 <p class="note"><span class="required">*</span> 为必填项</p>
 <div class="row">
-<?php $this->widget('CAutoComplete',array(
-		'model'=>$model,
-		'attribute'=>'username',
-		'data'=>$usernames,
-		'multiple'=>false,
-		'htmlOptions'=>array('size'=>25),
-		
-));?>
+<?php var_dump($model->project);?>
+<?php echo $form->dropDownList($model,'username',$model->project->getUserOptions()); ?>
 &nbsp; <class="note"><span class="required">*</span>
+
 <?php echo $form->error($model,'username'); ?>
 </div>
 
 <div class="row">
 <?php echo $form->labelEx($model,'角色');?>
-<?php var_dump(Project::getUserRoleOptions());?>
-<?/* php echo $form->dropDownList($model,'role',Project::getUserRoleOptions()); */?>
+
+<?php echo $form->dropDownList($model,'role',array('role' => 'member')); ?>
 <?php echo $form->error($model,'role');?>
+&nbsp; <class="note"><span class="required">*</span>
 </div>
 
 <div class="row buttons">

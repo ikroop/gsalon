@@ -148,6 +148,8 @@ class Project extends TrackStarActiveRecord
 			return $command->execute()==1 ? true : false;
 		}
 		
+	
+		
 	public static function getUserRoleOptions()
 	{
 		return CHtml::listData(Yii::app()->authManager->getRoles(),'name','name');
